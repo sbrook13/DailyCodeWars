@@ -1,3 +1,9 @@
+#8.12.2020 Solution "Triangle"
+
+def isTriangle(a,b,c)
+  a + b > c && a + c > b && c + b > a
+end
+
 #8.12.2020 Solution "Western Suburbs Croquet Club" 
 
 # Senior, at least 55 years old and handicap greater than 7. 
