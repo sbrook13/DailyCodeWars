@@ -1,3 +1,27 @@
+require 'pry'
+#8.13.2020 Solution "Order Words"
+
+def order(words)
+  each_word = words.split(" ")
+  new_words = []
+  each_word.map do |word|
+    binding.pry
+    i = 0
+    while i < each_word.length do
+      if word.include?((i+1).to_s)
+        binding.pry
+        new_words[i] = word
+      end
+    i +=1
+    end
+  end  
+  new_words.join(" ")
+end
+
+def order(words)
+  words.split.sort_by { |w| w.chars.min } .join(" ")
+end
+
 #8.12.2020 Solution "Triangle"
 
 def isTriangle(a,b,c)
