@@ -1,15 +1,20 @@
 require 'pry'
+#8.14.2020 Solution "Square Digits"
+def square_digits num
+  num.to_s.split("").map{|x| x.to_i**2}.map{|x| x.to_s}.join.to_i
+end
+
+
+square_digits(18394)
 #8.13.2020 Solution "Order Words"
 
 def order(words)
   each_word = words.split(" ")
   new_words = []
   each_word.map do |word|
-    binding.pry
     i = 0
     while i < each_word.length do
       if word.include?((i+1).to_s)
-        binding.pry
         new_words[i] = word
       end
     i +=1
