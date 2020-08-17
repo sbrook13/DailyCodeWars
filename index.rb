@@ -1,4 +1,9 @@
 require 'pry'
+#8.17.2020 Kata 8 kyu - Solution "return greeting"
+def greet(name)
+  return "Hello, #{name} how are you doing today?"
+end
+
 #8.16.2020 Solution "New Inhabitants"
 def nb_year(p0, percent, aug, p)
   n=0
