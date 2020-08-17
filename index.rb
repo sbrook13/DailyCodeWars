@@ -1,4 +1,15 @@
 require 'pry'
+#8.16.2020 Solution "New Inhabitants"
+def nb_year(p0, percent, aug, p)
+  n=0
+  new_population = p0
+  until new_population >= p do
+    new_population += new_population*(percent.to_f/100)+aug
+    n+=1
+  end  
+  n
+end
+
 #8.14.2020 Solution "Square Digits"
 def square_digits num
   num.to_s.split("").map{|x| x.to_i**2}.map{|x| x.to_s}.join.to_i
