@@ -1,4 +1,17 @@
 require 'pry'
+#8.19.2020
+def sum_two_smallest_numbers(numbers)
+  numbers.min(2).reduce(:+)
+end
+
+sum_two_smallest_numbers([5, 8, 12, 18, 22])
+
+# #8.17.2020 Kata 7 kyu - Solution "no space array"
+# def spacey(array)
+#   return array.map((a,i)=>array.slice(0,i+1).join(''))
+# end
+
+
 #8.17.2020 Kata 8 kyu - Solution "return greeting"
 def greet(name)
   return "Hello, #{name} how are you doing today?"
