@@ -1,5 +1,16 @@
 require 'pry'
-#8.19.2020
+# 8.24.2020 anagrams level 5
+def anagrams(word, words)
+  anagrams = []
+  words.each do |each_word|
+    if word.chars.sort == each_word.chars.sort
+      anagrams << each_word
+    end
+  end
+  anagrams
+end
+
+# 8.19.2020
 def sum_two_smallest_numbers(numbers)
   numbers.min(2).reduce(:+)
 end
