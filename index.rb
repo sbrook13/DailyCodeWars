@@ -1,4 +1,11 @@
 require 'pry'
+# 8.26.2020 filter photos level 6
+def delete_nth(order,max_e)
+  occurences = Hash.new(0)
+  order.reject {|item| occurences[item] += 1 > max_e}
+end
+
+delete_nth([20,37,20,21,20,37,37,20],2)
 # 8.24.2020 anagrams level 5
 def anagrams(word, words)
   anagrams = []
