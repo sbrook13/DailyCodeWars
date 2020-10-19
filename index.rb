@@ -1,8 +1,14 @@
 require 'pry'
+
+# 8.27.2020 phone number
+def createPhoneNumber(numbers)
+  numbers.map{|i| i.to_s}.insert(0,"(").insert(4,") ").insert(8, "-").join()
+end
+
 # 8.26.2020 filter photos level 6
 def delete_nth(order,max_e)
   occurences = Hash.new(0)
-  order.reject {|item| occurences[item] += 1 > max_e}
+  order.reject {|item| occurences[item].to_i += 1 > max_e}
 end
 
 delete_nth([20,37,20,21,20,37,37,20],2)
