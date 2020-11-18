@@ -42,3 +42,18 @@ function validBraces(braces){
   }
   return braces.length == 0;
 }
+
+
+// 11.17.2020 unique in order 
+var uniqueInOrder=function(iterable){
+  let i = 0
+  let uniqueArray = []
+  var last
+  while (i < iterable.length) {
+    if (iterable[i] !== last) {
+      uniqueArray.push(last = iterable[i])
+    }
+    i++
+    }
+  return uniqueArray
+}
