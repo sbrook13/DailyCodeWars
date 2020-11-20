@@ -57,3 +57,23 @@ var uniqueInOrder=function(iterable){
     }
   return uniqueArray
 }
+
+// 11.19.2020 multiples of 3 or 5
+
+function solution(number){
+  let i = 0
+  var multiples = []
+  if (number<3){
+    return 0
+  } else {
+    while (i < number){
+      if (Number.isInteger(i/3)){
+        multiples.push(i)
+      } else if (Number.isInteger(i/5)){
+        multiples.push(i)
+      }
+      i++
+    }
+    return multiples.reduce((a, b) => a + b)
+  }
+}
