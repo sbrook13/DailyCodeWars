@@ -77,3 +77,8 @@ function solution(number){
     return multiples.reduce((a, b) => a + b)
   }
 }
+
+// 11.20.2020 Squareroot 
+var isSquare = function(n){
+  return Number.isInteger(Math.sqrt(n))
+}
