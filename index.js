@@ -82,3 +82,28 @@ function solution(number){
 var isSquare = function(n){
   return Number.isInteger(Math.sqrt(n))
 }
+
+// 11.21.2020 sum numbers between two integers
+
+//my long answer:
+function getSum( a,b ){
+  var allNumbersArray = []
+  if (a === b){
+     return a
+  }
+  var lowNum = a < b ? a : b
+  var topNum = a < b ? b : a
+  var nextNum = lowNum
+  while (nextNum <= topNum) {
+    allNumbersArray.push(nextNum)
+    nextNum = nextNum + 1
+   }
+  return allNumbersArray.reduce((a,b) => a+b )
+}
+
+// better answer:
+const GetSum2 = (a, b) => {
+  let min = Math.min(a, b),
+      max = Math.max(a, b);
+  return (max - min + 1) * (min + max) / 2;
+}
