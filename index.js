@@ -107,3 +107,16 @@ const GetSum2 = (a, b) => {
       max = Math.max(a, b);
   return (max - min + 1) * (min + max) / 2;
 }
+
+// 11.22.2020 slice and concatenate for longest string
+function longestConsec(strarr, k) {
+  var longestWord = "";
+  for(var i=0;k>0 && i<=strarr.length-k;i++){
+    var portionOfArray = strarr.slice(i,i+k);
+    var newConcatenatedWord = portionOfArray.join("");
+    if(newConcatenatedWord.length > longestWord.length){
+      longestWord = newConcatenatedWord;
+    }
+  }
+  return longestWord;
+}
