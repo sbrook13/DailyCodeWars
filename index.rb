@@ -6,12 +6,12 @@ def createPhoneNumber(numbers)
 end
 
 # 8.26.2020 filter photos level 6
-def delete_nth(order,max_e)
-  occurences = Hash.new(0)
-  order.reject {|item| occurences[item].to_i += 1 > max_e}
-end
+# def delete_nth(order,max_e)
+#   occurences = Hash.new(0)
+#   order.reject {|item| occurences[item].to_i += 1 > max_e}
+# end
 
-delete_nth([20,37,20,21,20,37,37,20],2)
+# delete_nth([20,37,20,21,20,37,37,20],2)
 # 8.24.2020 anagrams level 5
 def anagrams(word, words)
   anagrams = []
@@ -113,4 +113,20 @@ end
 
 def numberToString(num)
   num.to_s
+end
+
+# 11.24.2020 Alphabet Position challenge
+def alphabet_position(text)
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+  alphabetLetters = alphabet.split("")
+  textLetters = text.split("")
+  translated = []
+  textLetters.map{|eachLetter|
+    alphabetLetters.map.with_index { |letter, index| 
+      if eachLetter.downcase === letter
+        translated.push(index+1)
+      end
+    }
+  }  
+  return translated.join(" ")
 end
