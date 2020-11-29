@@ -130,3 +130,8 @@ def alphabet_position(text)
   }  
   return translated.join(" ")
 end
+
+# 11.28.2020 solution for finding missing sequence
+def find_missing(sequence)
+  (sequence[0] + sequence[-1]) * (sequence.size + 1) / 2 - sequence.sum
+end
