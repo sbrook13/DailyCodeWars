@@ -125,3 +125,8 @@ function longestConsec(strarr, k) {
 function createPhoneNumber(numbers){
   return '(' + numbers.slice(0,3).join('') + ') ' + numbers.slice(3,6).join('') + '-' + numbers.slice(6).join('');
 }
+
+// 12.02.2020 number to string
+function numberToString(num) {
+  return num.toString();
+}
