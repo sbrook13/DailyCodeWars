@@ -141,3 +141,14 @@ function unluckyDays(year){
   }
   return unlucky;
 }
+
+// 12.17.2020 count days using Sets
+function daysRepresented(trips) {
+  const set = new Set();
+  trips.map(([a, b]) => {
+    for (let i = a; i <= b; ++i) {
+      set.add(i);
+    }
+  });
+  return set.size;
+}
