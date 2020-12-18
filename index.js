@@ -142,7 +142,7 @@ function unluckyDays(year){
   return unlucky;
 }
 
-// 12.17.2020 count days using Sets
+// 12.16.2020 count days using Sets
 function daysRepresented(trips) {
   const set = new Set();
   trips.map(([a, b]) => {
@@ -151,4 +151,19 @@ function daysRepresented(trips) {
     }
   });
   return set.size;
+}
+
+// 12.17.2020 triangular number
+function isTriangular(t) {
+  i=1
+  while (i <= t) {
+    if (t*2 === i * (i+1)) {
+      return true
+    } else {
+      if (i === t){
+        return false
+      }
+      i++
+    }
+  }
 }
