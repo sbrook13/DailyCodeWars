@@ -173,3 +173,11 @@ function isTriangular(t) {
   return Math.sqrt(8*t + 1) % 1 == 0;
 }
 
+// 12.18.2020 approx deriv
+
+function deriv(f){
+  return function(x) {
+    var d = 0.001 * x || Number.MIN_VALUE
+    return (f(x + d) - f(x - d)) / (2 * d)
+  }
+}
