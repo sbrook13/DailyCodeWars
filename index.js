@@ -205,3 +205,12 @@ function replaceNounPhrases(sentence, pronouns, dictionary) {
 
   return sentence.join(" ");
 }
+
+// 12.21.2020
+function findSundays() {
+  for (var year = 2014; year <= 2050; year++){
+    var d = new Date(year, 0, 1);
+    if ( d.getDay() === 0 )
+      return "January 1st of " + year +" is a Sunday."
+    }
+  }
