@@ -214,3 +214,12 @@ function findSundays() {
       return "January 1st of " + year +" is a Sunday."
     }
   }
+
+// 12.22.2020 are integers?
+function check_numbers(x, y) {
+  if ((x >= 50 && x <= 99) || (y >= 50 && y <= 99)) {
+    return true;
+  } else {
+    return false;
+  }
+}
